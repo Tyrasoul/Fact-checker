@@ -121,6 +121,30 @@
 
     <main class="flex-grow max-w-7xl mx-auto p-6 w-full space-y-12">
 
+        <!-- Section: Interactive Database & Flashcards -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">&#x1F4BE; Intelligence Archive & Flashcards</h2>
+                <p class="text-slate-600 mt-2" id="archive-description">
+                    Explore the detailed fact-checks and definitions of intelligence programs. Use the search bar to filter by agency or keyword. Toggle "Study Mode" in the header to convert these into interactive flashcards for memorization.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <input type="text" id="searchInput" placeholder="Search agencies (NSA, CIA), programs (PRISM), or concepts..." class="w-full md:w-1/2 p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <select id="filterSelect" class="p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                        <option value="all">All Statuses</option>
+                        <option value="True">Verified True</option>
+                        <option value="Mixed">Mixed/Debated</option>
+                        <option value="Sensationalized">Sensationalized/False</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid Container for Cards -->
+            <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cards dynamically injected via JS -->
+            </div>
+        </section>
+
         <!-- Section: Analytics Dashboard -->
         <section id="dashboard-section" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 transition-all duration-500">
             <div class="mb-6 border-b border-slate-100 pb-4">
@@ -145,29 +169,6 @@
             </div>
         </section>
 
-        <!-- Section: Interactive Database & Flashcards -->
-        <section>
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">&#x1F4BE; Intelligence Archive & Flashcards</h2>
-                <p class="text-slate-600 mt-2" id="archive-description">
-                    Explore the detailed fact-checks and definitions of intelligence programs. Use the search bar to filter by agency or keyword. Toggle "Study Mode" in the header to convert these into interactive flashcards for memorization.
-                </p>
-                <div class="mt-4 flex gap-2">
-                    <input type="text" id="searchInput" placeholder="Search agencies (NSA, CIA), programs (PRISM), or concepts..." class="w-full md:w-1/2 p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <select id="filterSelect" class="p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
-                        <option value="all">All Statuses</option>
-                        <option value="True">Verified True</option>
-                        <option value="Mixed">Mixed/Debated</option>
-                        <option value="Sensationalized">Sensationalized/False</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Grid Container for Cards -->
-            <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cards dynamically injected via JS -->
-            </div>
-        </section>
 
     </main>
 
