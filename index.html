@@ -166,7 +166,7 @@
     </main>
 
     <footer class="bg-slate-900 text-slate-400 py-6 text-center mt-auto">
-        <p class="text-sm">Based on public reporting, leaked documents (Snowden, Vault 7), and technical cybersecurity analyses.</p>
+        <p class="text-sm">Built from public reporting, leaked documents (Snowden, Vault 7), and cybersecurity analyses.</p>
     </footer>
 
     <script>
@@ -174,121 +174,121 @@
         const intelligenceData = [
             {
                 id: 1,
-                frontConcept: "FBI distributes viruses/keyloggers immune to mainstream AV.",
+                frontConcept: "FBI uses malware/keyloggers that bypass antivirus",
                 cited: "Magic Lantern, CIPAV, NIT",
                 agency: "FBI",
                 status: "True",
                 vector: "Software",
-                backDetail: "The FBI utilizes specific malware (Network Investigative Techniques - NITs) to track targets. Programs like Magic Lantern (keylogger) and CIPAV (spyware) were developed for this. Historically, major Anti-Virus vendors have whitelisted or been legally pressured to ignore certain government surveillance signatures."
+                backDetail: "The FBI uses specialized malware (called Network Investigative Techniques or NITs) to track targets.<br>Tools like Magic Lantern (keylogger) and CIPAV (spyware) were developed for this purpose.<br>In some cases, antivirus companies have whitelisted these tools or been legally required to ignore certain government surveillance signatures."
             },
             {
                 id: 2,
-                frontConcept: "NSA forced hardware backdoors in Intel/AMD CPUs (access while off).",
+                frontConcept: "Claims of hardware backdoors in Intel/AMD CPUs",
                 cited: "Intel ME, AMD PSP",
                 agency: "NSA",
                 status: "Mixed",
                 vector: "Hardware",
-                backDetail: "Intel Management Engine (ME) and AMD Platform Security Processor (PSP) are separate co-processors operating below the OS (Ring -3) with full system access, even when the PC is 'off' but plugged in. While heavily utilized by intelligence, the claim that NSA 'forced' their creation specifically as a backdoor is heavily debated; they are marketed as enterprise management tools but serve as massive security vulnerabilities."
+                backDetail: "Intel and AMD CPUs include low-level components like the <b>Management Engine (ME)</b> and <b>Platform Security Processor (PSP)</b>.<br>These operate below the operating system and have deep system access, even when the PC appears “off” (but still powered).<br>While these features are widely used for management and security, they are also seen as potential vulnerabilities.<br>The claim that the NSA specifically “forced” them as backdoors is debated."
             },
             {
                 id: 3,
-                frontConcept: "NSA backdoored Random Number Generators to break RSA encryption.",
+                frontConcept: "NSA pushed a backdoored random number standard",
                 cited: "Dual_EC_DRBG, Bullrun",
                 agency: "NSA",
                 status: "True",
                 vector: "Cryptography",
-                backDetail: "Under the 'Bullrun' program, the NSA worked to defeat encryption. They successfully pushed a flawed algorithm (Dual_EC_DRBG) containing a backdoor as a NIST standard. Reuters reported the NSA paid RSA Security $10 million to make it the default RNG in their Bsafe software."
+                backDetail: "Under the <b>Bullrun program</b>, the NSA worked to weaken encryption standards.<br>They promoted a flawed algorithm called <b>Dual_EC_DRBG</b>, which contained a potential backdoor, and had it adopted as a NIST standard.<br><br>Reports later revealed that the NSA paid RSA Security <b>$10 million</b> to make it the default in their BSAFE software."
             },
             {
                 id: 4,
-                frontConcept: "Electronics transmit RF allowing NSA access without internet.",
+                frontConcept: "Devices can send data via radio without internet access",
                 cited: "Cottonmouth-I, SURLYSPAWN, ANT Catalog",
                 agency: "NSA",
                 status: "True",
                 vector: "Hardware",
-                backDetail: "The leaked NSA ANT catalog detailed devices designed to bridge air-gapped networks. 'Cottonmouth-I' is a USB plug with a hidden RF transceiver. 'SURLYSPAWN' is a keystroke monitor that exfiltrates data via radio frequencies."
+                backDetail: "Leaked NSA ANT catalog documents describe tools designed to access <b>air-gapped systems</b> (devices not connected to the internet).<br><br>For example, <b>Cottonmouth-I</b> is a USB device with a hidden radio transmitter, and <b>SURLYSPAWN</b> can capture keystrokes and send data over radio signals.<br><br>These tools allow data to be extracted even without an internet connection."
             },
             {
                 id: 5,
-                frontConcept: "NSA intercepts electronics in transit to install malware.",
+                frontConcept: "NSA intercepts shipped devices to install malware",
                 cited: "TAO Team (Interdiction)",
                 agency: "NSA",
                 status: "True",
                 vector: "Physical",
-                backDetail: "Snowden documents revealed the Tailored Access Operations (TAO) unit engages in 'interdiction'—intercepting packages (like Cisco networking gear) en route to targets, carefully opening them, installing beacon implants or backdoored firmware, and repackaging them."
+                backDetail: "Snowden documents revealed that the NSA’s <b>Tailored Access Operations (TAO)</b> unit intercepts shipments before they reach targets.<br><br>In a process called <b>interdiction</b>, devices are opened, modified with malware or backdoored firmware, and then resealed before delivery."
             },
             {
                 id: 6,
-                frontConcept: "NSA intercepts mail to bug microwaves and kitchen appliances.",
+                frontConcept: "Claims that NSA bugs microwaves and appliances",
                 cited: "ANT/TAO Catalog",
                 agency: "Sensationalized",
                 status: "Sensationalized",
                 vector: "Physical",
-                backDetail: "While interdiction is real for IT gear (routers, servers), the claim about bugging microwaves is false and stems from a misunderstood 2017 TV interview comment. The ANT catalog targets IT infrastructure, not standard kitchen appliances."
+                backDetail: "Interception of shipped devices is real for IT equipment (like routers and servers).<br><br>However, claims about bugging microwaves or kitchen appliances are false. They come from a misunderstood 2017 TV interview.<br><br>The NSA’s ANT catalog focuses on IT infrastructure, not everyday household appliances."
             },
             {
                 id: 7,
-                frontConcept: "NSA broken Tor networks and identifies users with ISP help.",
+                frontConcept: "NSA targets Tor users using ISP-level attacks",
                 cited: "FOXACID, QUANTUMINSERT",
                 agency: "NSA",
                 status: "True",
                 vector: "Network",
-                backDetail: "The NSA doesn't necessarily break Tor's core cryptography. Instead, using ISP access, they use QUANTUMINSERT to redirect a target's Tor browser traffic to FOXACID servers, which deploy exploits (like EGOTISTICALGIRAFFE) to infect the computer and deanonymize the user."
+                backDetail: "The NSA does not break Tor’s core encryption.<br>Instead, it targets users through network-level attacks.<br><br>Using ISP-level access, tools like <b>QUANTUMINSERT</b> can redirect a user’s browser to malicious servers <b>(FOXACID)</b>, which then deploy exploits (such as <b>EGOTISTICALGIRAFFE</b>) to infect the system and reveal the user’s identity."
             },
             {
                 id: 8,
-                frontConcept: "Tech companies provide NSA advance warnings of zero-days.",
+                frontConcept: "Reports suggest agencies received early access to some zero-day vulnerabilities",
                 cited: "TAO, PRISM",
                 agency: "NSA",
                 status: "True",
                 vector: "Software",
-                backDetail: "PRISM primarily deals with user data sharing. However, investigative reports (e.g., Bloomberg 2013) indicated that major tech companies, as part of intelligence sharing agreements, would brief agencies on critical vulnerabilities before public patches were released, allowing agencies a window to exploit them."
+                backDetail: "PRISM primarily deals with user data sharing, not vulnerabilities.<br><br>However, investigative reports (such as Bloomberg, 2013) suggested that, in some cases, agencies were informed about critical software vulnerabilities before public patches were released.<br><br><b>This created a window where those vulnerabilities could potentially be exploited.</b>"
             },
             {
                 id: 9,
-                frontConcept: "CIA can infect car control systems for remote takeover.",
+                frontConcept: "CIA explored hacking vehicle control systems",
                 cited: "Vault 7",
                 agency: "CIA",
                 status: "True",
                 vector: "Software",
-                backDetail: "The WikiLeaks 'Vault 7' documents revealed the CIA's Embedded Devices Branch investigated hacking vehicle control systems. The stated potential purpose, according to WikiLeaks analysis, was to engage in nearly undetectable assassinations."
+                backDetail: "WikiLeaks’ <b>Vault 7</b> documents revealed that the CIA’s Embedded Devices Branch researched methods to hack vehicle control systems.<br><br>According to the documents, one proposed goal was to enable remote vehicle control in a way that could be difficult to trace."
             },
             {
                 id: 10,
-                frontConcept: "CIA/MI5 hack smart TVs to spy on users.",
+                frontConcept: "CIA/MI5 developed tools to turn smart TVs into listening devices",
                 cited: "Weeping Angel",
                 agency: "CIA",
                 status: "True",
                 vector: "Software",
-                backDetail: "'Weeping Angel' is a tool co-developed by the CIA and UK's MI5 targeting Samsung smart TVs. It places the TV in a 'Fake-Off' mode, where the screen is black and LEDs are off, but the microphone remains active, recording room audio and sending it via the internet."
+                backDetail: "The <b>Weeping Angel</b> tool, revealed in the Vault 7 leaks, targeted Samsung smart TVs.<br><br>It placed the TV into a “Fake-Off” mode, where the screen appears off but the device remains active.<br>The microphone could continue recording room audio and send it over the internet."
             },
             {
                 id: 11,
-                frontConcept: "NSA has internet fiber backdoored to collect data globally.",
+                frontConcept: "NSA taps internet backbone cables to collect data",
                 cited: "Room 641A, Upstream Collection",
                 agency: "NSA",
                 status: "True",
                 vector: "Network",
-                backDetail: "'Upstream collection' involves tapping directly into the fiber-optic cables forming the internet backbone. Room 641A was a famous AT&T facility in San Francisco where optical splitters routed copies of all internet traffic directly to NSA equipment."
+                backDetail: "'Upstream collection' involves tapping into major fiber-optic cables that carry internet traffic.<br><br>At facilities like <b>Room 641A</b> (an AT&T site in San Francisco), optical splitters were used to copy internet traffic and route it to NSA systems."
             },
             // Definitions added for Flashcard richness
             {
                 id: 12,
-                frontConcept: "What is the NSA ANT Catalog?",
+                frontConcept: "NSA ANT Catalog",
                 cited: "Terminology",
                 agency: "NSA",
                 status: "Verified",
                 vector: "Hardware",
-                backDetail: "A 50-page classified document leaked in 2013 detailing cyber surveillance technology available to the NSA's Tailored Access Operations (TAO) group, primarily focusing on hardware implants and RF tech."
+                backDetail: "A classified document leaked in 2013 that lists surveillance tools used by the NSA’s <b>TAO</b> unit.<br><br>It mainly focuses on hardware implants and radio-based (RF) surveillance technology."
             },
              {
                 id: 13,
-                frontConcept: "What is Vault 7?",
+                frontConcept: "Vault 7",
                 cited: "Terminology",
                 agency: "CIA",
                 status: "Verified",
                 vector: "Software",
-                backDetail: "A series of documents published by WikiLeaks in 2017 detailing the CIA's electronic surveillance and cyber warfare capabilities, including tools to compromise cars, smart TVs, web browsers, and smartphones."
+                backDetail: "A collection of documents published by WikiLeaks in 2017 revealing the CIA’s cyber tools and surveillance capabilities.<br><br>It includes tools targeting devices like cars, smart TVs, web browsers, and smartphones."
             }
         ];
 
